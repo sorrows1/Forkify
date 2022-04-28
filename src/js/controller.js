@@ -109,7 +109,7 @@ const controlAddRecipe = async function (newRecipe) {
     bookmarksView.render(model.state.bookmarks);
 
     // change id in URL
-    window.history.pushState(null, '', `#${model.state.recipe.id}`)
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
 
     // close form window
     setTimeout(function () {
@@ -130,5 +130,10 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
 };
+
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
+newFeature();
 
 init();
